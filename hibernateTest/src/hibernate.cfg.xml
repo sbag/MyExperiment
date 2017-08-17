@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.password">root</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.connection.autocommit">true</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.current_session_context_class">thread</property>
+  <property name="hibernate.id.new_generator_mappings">false</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <property name="hibernate.cache.use_second_level_cache">true</property>
+  <property name="hibernate.cache.use_query_cache">true</property>
+  <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+  <property name="net.sf.ehcache.configurationResourceName">ehcache.xml</property>
+  <mapping class="com.baxter.hibernate.entity.Employee"/>
+  <mapping class="com.baxter.hibernate.entity.ContractEmployee"/>
+  <mapping class="com.baxter.hibernate.entity.RegularEmployee"/>
+  <mapping class="com.baxter.hibernate.entity.Bird"/>
+  <mapping class="com.baxter.hibernate.entity.Parrot"/>
+  <mapping class="com.baxter.oneToMany.Student"/>
+  <mapping class="com.baxter.oneToMany.Department"/>
+  <mapping class="com.baxter.manyToOne.Category"/>
+  <mapping class="com.baxter.manyToOne.Product"/>
+  <mapping class="com.baxter.oneToMany.Person"/>
+  <mapping class="com.baxter.oneToMany.Phone"/>
+  <mapping class="com.baxter.manyToMany.Meeting"/>
+  <mapping class="com.baxter.manyToMany.Leader"/>
+  <mapping class="com.hibernate.ehcache.Country"/>
+ </session-factory>
+</hibernate-configuration>
